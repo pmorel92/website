@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Philippe Morel, Video and Media Specialist</title>
+	{% load static from staticfiles %}
+	<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% static 'favicon.ico' %}" rel='shortcut icon'>
+	</head>
+<body>
+
+	<header>
+		<nav>
+			<ul id="nav">
+				<a href="#bio"><li>Bio</li></a>
+				<a href="#cv"><li>CV</li></a>
+				<a href="#work"><li>My Work</li></a>
+			</ul>
+		</nav>
+	</header>
+	<div id="main">
+	<h1 class="name">Philippe Morel</h1>
+		<h2 class="contact">Contact Info:<br>Email:<span class="email">philippe.a.b.morel@gmail.com</span><br>Phone Number: 408-757-6605<br>San Francisco, CA</h2>
+		<section id="social">
+				<a href="https://www.linkedin.com/in/philippe-morel-0aaaa526/"><img src="{% static '2000px-Linkedin.svg.png' %}" class="social"></a>
+		</section>
+		<section id="bio">
+			<p class="section_title">Bio</p>
+			{% for offbio in offbios %}
+			<p class="bio_text">{{offbio.bio|linebreaksbr}}</p>
+			{% endfor %}
+		</section>
+		<section id="cv">
+			<p class="section_title">My CV</p>
+			<iframe src="https://drive.google.com/file/d/14ewa-Zdh-N3-8I6lkDOYOFgbRpDIKK6c/preview" width="640" height="480"></iframe>
+		</section>
+	<section id="work">
+			<p class="section_title">My Work</p>
+		<article>
+			<header>
+				<a href="https://www.nodanews.com" target="_blank"><img src="{% static 'Nodanews_logo_website.png' %}" class="nodanews"></a>
+			</header>
+			{% for noda in nodas %}
+				<p class="noda_description">{{noda.description|linebreaksbr}}</p>
+				{% endfor %}
+		</article>
+	<article>
+		<header>
+			<h4 id="webcasts_heading"><span id="webcasts_first">Webcast Productions for NTT inc.</span><br>Click on a Link Below for a Recent Webcast I Produced/Directed<br>All Webcasts are Recorded Live and Unedited</h4>
+			<img src="{% static 'NTT_Logo.png' %}">
+		</header>
+
+	<div id="webcasts">
+		<div id="mtc">
+			<a href="https://mtc.ca.gov" target="_blank"><img src="{% static 'mtc-logo.jpg' %}" class="CA_logos"></a>
+				<ul class="meeting_list">	
+					<li class="agency_title">Metropolitan Transportation Commission</li>
+			{% for mtc in mtcs %}
+					<li>
+				<a href="{{mtc.url}}">
+					<span class="meeting_name">{{mtc.name}}</span><br>
+					<span class="meeting_date">{{mtc.date}}</span>
+				</a>
+					</li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div id="baaqmd">
+			<a href="http://www.baaqmd.gov/" target="_blank"><img src="{% static 'baaqmd4rgb.jpg' %}" class="CA_logos"></a>			
+				<ul class="meeting_list">	
+					<li class="agency_title">Bay Area Air Quality Managment District</li>			
+			{% for baaqmd in baaqmds %}
+					<li>
+				<a href="{{baaqmd.url}}" target="_blank">
+					<span class="meeting_name">{{baaqmd.name}}</span><br>
+					<span class="meeting_date">{{baaqmd.date}}</span>
+				</a>
+					</li>
+				
+			{% endfor %}
+			</ul>
+		</div>
+		<div id="abag">
+			<a href="https://abag.ca.gov/" target="_blank"><img src="{% static 'ABAG_Logo3.jpg' %}" class="CA_logos"></a>
+				<ul class="meeting_list">
+				<li class="agency_title">Association of Bay Area Governments</li>
+			{% for abag in abags %}
+				<li>
+				<a href="{{abag.url}}" target="_blank">
+					<span class="meeting_name">{{abag.name}}</span><br>
+					<span class="meeting_date">{{abag.date}}</span>
+				</a>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div id="casa">
+			<a href="https://mtc.ca.gov/our-work/plans-projects/casa-committee-house-bay-area" target="_blank"><img src="{% static 'casalogo.png' %}" class="CA_logos"></a>
+				<ul class="meeting_list">
+				<li class="agency_title">Commission to House the Bay Area (CASA)</li>
+			{% for casa in casas %}
+				<li>
+				<a href="{{casa.url}}" target="_blank">
+					<span class="meeting_name">{{casa.name}}</span><br>
+					<span class="meeting_date">{{casa.date}}</span>
+				</a>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div id="barc">
+			<a href="http://bayarearegionalcollaborative.org/" target="_blank"><img src="{% static 'BARC_Logo.png' %}" class="CA_logos"></a>
+				<ul class="meeting_list">
+				<li class="agency_title">Bay Area Regional Collaborative</li>
+			{% for barc in barcs %}
+				<li>
+				<a href="{{barc.url}}" target="_blank">
+					<span class="meeting_name">{{barc.name}}</span><br>
+					<span class="meeting_date">{{barc.date}}</span>
+				</a>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+										
+	</div>
+	</article>
+<article>
+{% for work in works %}
+
+		<div class="work_examples">
+			<header>
+				<h2 class="title">{{work.title}}</h2>
+				<p class="date_finished">Finished on {{work.date_finished}}</p>
+			</header>
+			<p class="role">Role: {{work.role}}</p>
+			<p class="work_description">{{work.description}}</p>
+	<iframe src="{{work.video_url}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>		
+			<hr>
+{% endfor %}
+</article>
+	</section>
+
+
+	<footer>
+		<p>Philippe Morel<br>Reach me at philippe.a.b.morel@gmail.com</p>
+	</footer>
+</div>
+</body>
+
+</html>
