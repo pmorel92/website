@@ -18,4 +18,4 @@ six==1.10.0
 waitress==1.4.3
 whitenoise==3.2.3
 psycopg2==2.9.1
-pycopg2-binary
+psycopg2-binary
