@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Philippe Morel, Video and Media Specialist</title>
-	{% load static from staticfiles %}
+	{% load static %}
 	<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="{% static 'favicon.ico' %}" rel='shortcut icon'>
@@ -56,7 +56,7 @@
 	<div id="webcasts">
 		<div id="mtc">
 			<a href="https://mtc.ca.gov" target="_blank"><img src="{% static 'mtc-logo.jpg' %}" class="CA_logos"></a>
-				<ul class="meeting_list">	
+				<ul class="meeting_list">
 					<li class="agency_title">Metropolitan Transportation Commission</li>
 			{% for mtc in mtcs %}
 					<li>
@@ -69,9 +69,9 @@
 			</ul>
 		</div>
 		<div id="baaqmd">
-			<a href="http://www.baaqmd.gov/" target="_blank"><img src="{% static 'baaqmd4rgb.jpg' %}" class="CA_logos"></a>			
-				<ul class="meeting_list">	
-					<li class="agency_title">Bay Area Air Quality Managment District</li>			
+			<a href="http://www.baaqmd.gov/" target="_blank"><img src="{% static 'baaqmd4rgb.jpg' %}" class="CA_logos"></a>
+				<ul class="meeting_list">
+					<li class="agency_title">Bay Area Air Quality Managment District</li>
 			{% for baaqmd in baaqmds %}
 					<li>
 				<a href="{{baaqmd.url}}" target="_blank">
@@ -79,7 +79,7 @@
 					<span class="meeting_date">{{baaqmd.date}}</span>
 				</a>
 					</li>
-				
+
 			{% endfor %}
 			</ul>
 		</div>
@@ -125,7 +125,7 @@
 			{% endfor %}
 			</ul>
 		</div>
-										
+
 	</div>
 	</article>
 <article>
@@ -139,7 +139,7 @@
 			<p class="role">Role: {{work.role}}</p>
 			<p class="work_description">{{work.description}}</p>
 	<iframe src="{{work.video_url}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>		
+			</div>
 			<hr>
 {% endfor %}
 </article>
