@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+nav {
+   background-color: aliceblue;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 5
+
+}
+nav ul{
+  overflow: hidden;
+  width : 900px;
+  margin: 0px auto;
+
+
+}
+
+nav ul li{
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+  font-family: Arial;
+  float: left;
+  margin: 0 10px;
+  padding: 10px;
+  width: 200px;
+  font-size: 2.5em;
+  text-align: center;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+
+}
+nav ul li:hover{
+  text-decoration: underline;
+}
+nav ul a{
+  text-decoration: none;
+}
+#main{
+  width: 500px;
+  margin: auto;
+}
+.name{
+  position: relative;
+  top:40px;
+  text-align: center;
+  font-family: Arial;
+  font-size: 3em
+}
+.email{
+  color: black;
+  text-decoration: none
+}
+.email:hover{
+  color: darkred;
+  text-decoration: underline;
+}
+.contact{
+  text-align: center;
+  position: relative;
+  top: 40px;
+    font-family: Arial;
+}
+#social{
+  display: block;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: 40px
+}
+.social{
+  margin: auto;
+  display: inline-block;
+  width: 50px;
+  height: auto;
+}
+.section_title{
+  font-family: Arial;
+  font-size: 3em
+}
+#bio{
+    text-align: center;
+  position: relative;
+  top:10px;
+    font-family: Arial;
+}
+.bio_text{
+  text-align: left;
+  width: 500px;
+  margin: auto;
+  font-family: Arial;
+}
+.noda_description{
+    text-align: left;
+  width: 500px;
+  margin: auto;
+  font-family: Arial;
+}
+#cv{
+    text-align: center;
+  position: relative;
+  top:10px;
+}
+.nodanews{
+  height: 250px
+}
+#work{
+  position: relative;
+  top:10px;
+  display: block;
+}
+.video-title{
+  font-size: 20pt;
+  text-decoration: bold;
+}
+
+hr{
+width: 50%;
+position: relative;
+top: 5px;
+left: 5%
+
+}
+.CA_logos{
+  width: 48%;
+  margin: 10px;
+}
+#webcasts{
+  display: block;
+  margin: auto;
+  width: 500px;
+
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+#webcasts_first{
+  font-size: 1.6em;
+  text-align: center;
+}
+#webcasts_heading{
+  text-align: left;
+  line-height: 30px
+}
+#webcasts a:hover{
+  text-decoration: underline;
+   transition: all 0.3s ease;
+}
+#webcasts div{
+  width: 50%;
+  float: left;
+}
+#webcasts a{
+  list-style-type: none;
+  color: black;
+  text-decoration: none;
+}
+.meeting_date{
+  font-style: italic;
+  color: darkred
+}
+#webcasts li{
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 10px
+}
+.agency_title{
+  font-size: 1.5em;
+  margin-bottom: 25px;
+}
+footer{
+    text-align: center;
+  position: relative;
+  top:40px;
+  font-family: Arial;
+  margin: 50px auto;
+  font-size: 2em
+}
+article {
+      font-family: Arial;
+      width: 100%;
+      margin: auto;
+      display: block;
+
+
+}
+.work_examples{
+  width: 100%;
+  display: block;
+}
+.role{
+  font-weight: bold;
+  font-size: 1.3em
+}
+.date_finished{
+  font-style: italic
+}
+.work_description{
+    text-align: left;
+  width: 500px;
+  margin: 20px auto;
+  font-family: Arial;
+}
