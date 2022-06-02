@@ -15,7 +15,7 @@ python-dateutil
 requests==2.20.0
 s3transfer==0.1.10
 six==1.10.0
-waitress==2.1.1
+waitress==2.1.2
 whitenoise==3.2.3
 psycopg2-binary
 django-utils-six
